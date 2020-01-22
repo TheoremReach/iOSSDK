@@ -28,11 +28,15 @@
 
 - (IBAction)launchTheoremReach:(id)sender {
     if ([[TheoremReach getInstance] isSurveyAvailable]) {
-        //placement example for additional targeting
-//        [TheoremReach showRewardCenter:@"be4aa618-3c11-498a-92f9-43bb01f2a4c9"];
-        
+        // placement example for additional targeting
+        // [TheoremReach showRewardCenter:@"be4aa618-3c11-498a-92f9-43bb01f2a4c9"];
         [TheoremReach showRewardCenter];
     }
+    
+        // Moment Survey example
+//        if ([[TheoremReach getInstance] isSurveyAvailable:[NSNumber numberWithInt:1]]) {
+//            [TheoremReach showMomentSurvey];
+//        }
 }
 
 @end

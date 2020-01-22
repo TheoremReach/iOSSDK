@@ -24,6 +24,10 @@
     [[TheoremReach getInstance] setSurveyListenerDelegate:self];
     
     [[TheoremReach getInstance] setSurveyAvailableDelegate:self];
+    
+    // Moment Example
+//    [[TheoremReach getInstance] setMomentDelegate:self];
+//    [[TheoremReach getInstance] enableMoments:YES];
         
     //customize navigation bar look
     [TheoremReach getInstance].navigationBarTextColor = @"#FFFFFF";
@@ -55,6 +59,27 @@
         NSLog(@"TheoremReach Survey Not Available!");
     }
 }
+
+// Moment Survey Callbacks
+//-(void)onMomentSurveyOpened {
+//    NSLog(@"TheoremReach onMomentSurveyOpened");
+//}
+//
+//-(void)onMomentSurveyClosed {
+//    NSLog(@"TheoremReach onMomentSurveyClosed");
+//}
+//
+//-(void)onMomentSurveyReceived: (NSNumber*) surveyLength {
+//    NSLog(@"TheoremReach onMomentSurveyReceived: %@", surveyLength);
+//}
+//
+//-(void)onMomentSurveyCompleted {
+//    NSLog(@"TheoremReach onMomentSurveyCompleted");
+//}
+//
+//-(void)onMomentSurveyNotEligible {
+//    NSLog(@"TheoremReach onMomentSurveyNotEligible");
+//}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

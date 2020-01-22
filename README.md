@@ -1,18 +1,18 @@
 # TheoremReach iOS-SDK
 
-TheoremReach iOS SDK v3.3.5
+TheoremReach iOS SDK v3.3.6
 
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
-## v3.3.5
-- Addition of placements for additional flexibility
+## v3.3.6
+- Fixing iPad bug for iOS 13
 
 #### Cocoapods:
 
 Add the following to your `podfile`
 
   ```groovy
-  pod 'TheoremReach', ‘3.3.5’
+  pod 'TheoremReach', ‘3.3.6’
   ```
 
   #### Manual:
