@@ -45,6 +45,7 @@
 
 - (void)askForIDFAPermissions {
     if (@available(iOS 14, *)) {
+#if __has_include(<AppTrackingTransparency/AppTrackingTransparency.h>)
         [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus authStatus) {
             
             if (authStatus == ATTrackingManagerAuthorizationStatusAuthorized) {
@@ -55,6 +56,9 @@
             
             [self initializeTheoremReachSDK];
         }];
+#else
+        [self initializeTheoremReachSDK];
+#endif
     }
 }
 
