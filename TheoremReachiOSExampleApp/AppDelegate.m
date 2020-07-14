@@ -15,26 +15,47 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-
-    [TheoremReach initWithApiKey:@"9148c4176f36f5302eb0a56695eb" userId:@"23344342252"];
     
-    [[TheoremReach getInstance] setRewardListenerDelegate:self];
-    
-    [[TheoremReach getInstance] setSurveyListenerDelegate:self];
-    
-    [[TheoremReach getInstance] setSurveyAvailableDelegate:self];
-    
-    // Moment Example
-//    [[TheoremReach getInstance] setMomentDelegate:self];
-//    [[TheoremReach getInstance] enableMoments:YES];
-        
-    //customize navigation bar look
-    [TheoremReach getInstance].navigationBarTextColor = @"#FFFFFF";
-    [TheoremReach getInstance].navigationBarText = @"Demo Title";
-    [TheoremReach getInstance].navigationBarColor = @"#211548";
+    if (@available(iOS 14, *)) {
+        [self askForIDFAPermissions];
+    } else {
+        [self initializeTheoremReachSDK];
+    }
     
     return YES;
+}
+
+- (void)initializeTheoremReachSDK {
+    [TheoremReach initWithApiKey:@"9148c4176f36f5302eb0a56695eb" userId:@"23344342252"];
+    
+    TheoremReach  *tr = [TheoremReach getInstance];
+    [tr setRewardListenerDelegate:self];
+    [tr setSurveyListenerDelegate:self];
+    [tr setSurveyAvailableDelegate:self];
+    
+    // Moment Example
+    // [tr setMomentDelegate:self];
+    // [tr enableMoments:YES];
+        
+    //customize navigation bar look
+    tr.navigationBarTextColor = @"#FFFFFF";
+    tr.navigationBarText = @"Demo Title";
+    tr.navigationBarColor = @"#211548";
+}
+
+- (void)askForIDFAPermissions {
+    if (@available(iOS 14, *)) {
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus authStatus) {
+            
+            if (authStatus == ATTrackingManagerAuthorizationStatusAuthorized) {
+                NSLog(@"You have allowed the example app to retrieve your IDFA.");
+            } else {
+                NSLog(@"You have denied the example app the right to retrieve your IDFA.");
+            }
+            
+            [self initializeTheoremReachSDK];
+        }];
+    }
 }
 
 - (void)onReward: (NSNumber* )quantity {
