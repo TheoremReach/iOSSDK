@@ -1,8 +1,12 @@
 # TheoremReach iOS-SDK
 
-TheoremReach iOS SDK v3.3.6
+TheoremReach iOS SDK v3.4.0
 
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
+
+## v3.4.0
+- Future proof for iOS 14
+- Fix iPadOS display issue with the reward center viewcontroller
 
 ## v3.3.6
 - Fixing iPad bug for iOS 13
@@ -12,7 +16,7 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 Add the following to your `podfile`
 
   ```groovy
-  pod 'TheoremReach', ‘3.3.6’
+  pod 'TheoremReach', ‘3.4.0’
   ```
 
   #### Manual:
