@@ -1,17 +1,22 @@
 # TheoremReach iOS-SDK
 
-TheoremReach iOS SDK v3.4.0
+TheoremReach iOS SDK v3.4.1
 
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
-## v3.4.0
+## Changelog
+
+### v3.4.1
+- Fix LC_VERSION_MIN_IPHONEOS to now be 14.0 error
+
+### v3.4.0
 - Future proof for iOS 14
 - Fix iPadOS display issue with the reward center viewcontroller
 
-## v3.3.6
+### v3.3.6
 - Fixing iPad bug for iOS 13
 
-#### Cocoapods:
+## Cocoapods:
 
 Add the following to your `podfile`
 
