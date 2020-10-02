@@ -1,10 +1,13 @@
 # TheoremReach iOS-SDK
 
-TheoremReach iOS SDK v3.4.1
+TheoremReach iOS SDK v3.4.2
 
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
 ## Changelog
+
+### v3.4.2
+- Fix code signing issue
 
 ### v3.4.1
 - Fix LC_VERSION_MIN_IPHONEOS to now be 14.0 error
