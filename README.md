@@ -24,7 +24,7 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 Add the following to your `podfile`
 
   ```groovy
-  pod 'TheoremReach', ‘3.4.0’
+  pod 'TheoremReach', ‘3.4.2’
   ```
 
   #### Manual:
