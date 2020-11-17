@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		723674DF228F2E6F005904AF /* TheoremReachSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 723674DE228F2E6F005904AF /* TheoremReachSDK.framework */; };
-		723674E0228F2E6F005904AF /* TheoremReachSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 723674DE228F2E6F005904AF /* TheoremReachSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7239634F20273F7300702509 /* ExternalAccessory.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7239634E20273F7300702509 /* ExternalAccessory.framework */; };
 		724E77E61EF14C6500271C2F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 724E77E51EF14C6500271C2F /* main.m */; };
 		724E77E91EF14C6500271C2F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 724E77E81EF14C6500271C2F /* AppDelegate.m */; };
@@ -24,6 +22,8 @@
 		724E78091EF14CF600271C2F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E78081EF14CF600271C2F /* SystemConfiguration.framework */; };
 		724E780B1EF14CFC00271C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780A1EF14CFC00271C2F /* UIKit.framework */; };
 		724E780D1EF14D0300271C2F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780C1EF14D0300271C2F /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B56A5D3825647BA800332D9D /* TheoremReachSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B56A5D3625647BA400332D9D /* TheoremReachSDK.xcframework */; };
+		B56A5D3925647BA800332D9D /* TheoremReachSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B56A5D3625647BA400332D9D /* TheoremReachSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				723674E0228F2E6F005904AF /* TheoremReachSDK.framework in Embed Frameworks */,
+				B56A5D3925647BA800332D9D /* TheoremReachSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -41,7 +41,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		723674DE228F2E6F005904AF /* TheoremReachSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TheoremReachSDK.framework; sourceTree = "<group>"; };
 		7239634E20273F7300702509 /* ExternalAccessory.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ExternalAccessory.framework; path = System/Library/Frameworks/ExternalAccessory.framework; sourceTree = SDKROOT; };
 		7239635020273F7300702509 /* TheoremReachiOSExampleApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TheoremReachiOSExampleApp.entitlements; sourceTree = "<group>"; };
 		724E77E11EF14C6500271C2F /* TheoremReachiOSExampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheoremReachiOSExampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +61,7 @@
 		724E78081EF14CF600271C2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		724E780A1EF14CFC00271C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		724E780C1EF14D0300271C2F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B56A5D3625647BA400332D9D /* TheoremReachSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TheoremReachSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				724E780D1EF14D0300271C2F /* WebKit.framework in Frameworks */,
+				B56A5D3825647BA800332D9D /* TheoremReachSDK.xcframework in Frameworks */,
 				724E780B1EF14CFC00271C2F /* UIKit.framework in Frameworks */,
 				724E78091EF14CF600271C2F /* SystemConfiguration.framework in Frameworks */,
 				724E78071EF14CEE00271C2F /* Security.framework in Frameworks */,
@@ -77,7 +78,6 @@
 				724E78031EF14CDE00271C2F /* Foundation.framework in Frameworks */,
 				7239634F20273F7300702509 /* ExternalAccessory.framework in Frameworks */,
 				724E78011EF14CD700271C2F /* CoreTelephony.framework in Frameworks */,
-				723674DF228F2E6F005904AF /* TheoremReachSDK.framework in Frameworks */,
 				724E77FF1EF14CCE00271C2F /* AdSupport.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,7 +88,7 @@
 		724E77D81EF14C6500271C2F = {
 			isa = PBXGroup;
 			children = (
-				723674DE228F2E6F005904AF /* TheoremReachSDK.framework */,
+				B56A5D3625647BA400332D9D /* TheoremReachSDK.xcframework */,
 				724E77E31EF14C6500271C2F /* TheoremReachiOSExampleApp */,
 				724E77E21EF14C6500271C2F /* Products */,
 				724E77FD1EF14CCD00271C2F /* Frameworks */,
@@ -368,7 +368,10 @@
 				);
 				INFOPLIST_FILE = TheoremReachiOSExampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -388,7 +391,10 @@
 				);
 				INFOPLIST_FILE = TheoremReachiOSExampleApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";

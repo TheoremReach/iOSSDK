@@ -1,10 +1,13 @@
 # TheoremReach iOS-SDK
 
-TheoremReach iOS SDK v3.4.2
+TheoremReach iOS SDK v3.4.3
 
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
 ## Changelog
+
+### v3.4.3
+- Use xcframework
 
 ### v3.4.2
 - Fix code signing issue
@@ -24,7 +27,7 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 Add the following to your `podfile`
 
   ```groovy
-  pod 'TheoremReach', ‘3.4.2’
+  pod 'TheoremReach', ‘3.4.3’
   ```
 
   #### Manual:
