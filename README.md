@@ -32,17 +32,7 @@ Add the following to your `podfile`
 
   #### Manual:
 
-  Download the latest version of the [TheoremReach iOS SDK](https://github.com/theoremreach/iOSSDK) and add the **TheoremReachSDK.framework** to your project. Follow the integration guide to setup your application to use TheoremReach.
-  
-  #### Simulator:
-  
-  In order to run the TheoremReach iOS SDK on a simulator, you'll need to use the simulator specific framework located [here](https://github.com/TheoremReach/TheoremReach-iOS-SDK-Podfile/tree/master/simulator).
-  
-  If you're using Cocoapods, download the [TheoremReach-iOS-SDK-Podfile](https://github.com/TheoremReach/TheoremReach-iOS-SDK-Podfile.git) repository and then add the following to your `podfile`
-  
-  ```groovy
-  pod 'TheoremReach', :path => '/{path to folder containing the repo}/TheoremReach-iOS-SDK-Podfile/simulator'
-  ```
+  Download the latest version of the [TheoremReach iOS SDK](https://github.com/theoremreach/iOSSDK) and add the **TheoremReachSDK.xcframework** to your project. Follow the integration guide to setup your application to use TheoremReach.
 
 ## Other platforms:
 
