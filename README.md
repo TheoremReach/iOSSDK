@@ -6,6 +6,9 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 
 ## Changelog
 
+### v3.4.4
+- Correctly lookup sdk version
+
 ### v3.4.3
 - Use xcframework
 
