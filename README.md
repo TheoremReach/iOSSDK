@@ -1,10 +1,13 @@
 # TheoremReach iOS-SDK
 
-TheoremReach iOS SDK v3.4.3
+TheoremReach iOS SDK v3.5.0
 
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
 ## Changelog
+
+### v3.5.0
+- Minor performance improvements
 
 ### v3.4.4
 - Correctly lookup sdk version
