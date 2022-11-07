@@ -1,10 +1,11 @@
 # TheoremReach iOS-SDK
 
-TheoremReach iOS SDK v3.5.0
-
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
 ## Changelog
+
+### v3.5.1
+- Added getIsSurveyAvailable
 
 ### v3.5.0
 - Minor performance improvements
