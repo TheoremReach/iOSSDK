@@ -4,6 +4,9 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 
 ## Changelog
 
+### v3.5.3
+- Fix issue with redirecting to offers
+
 ### v3.5.2
 - Fix visual issue in landscape
 
