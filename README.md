@@ -4,6 +4,9 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 
 ## Changelog
 
+### v3.5.4
+- Better third party login support
+
 ### v3.5.3
 - Fix issue with redirecting to offers
 
