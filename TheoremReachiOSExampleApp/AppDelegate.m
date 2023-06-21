@@ -32,10 +32,6 @@
     [tr setRewardListenerDelegate:self];
     [tr setSurveyListenerDelegate:self];
     [tr setSurveyAvailableDelegate:self];
-    
-    // Moment Example
-    // [tr setMomentDelegate:self];
-    // [tr enableMoments:YES];
         
     //customize navigation bar look
     tr.navigationBarTextColor = @"#FFFFFF";
