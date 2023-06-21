@@ -4,6 +4,9 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 
 ## Changelog
 
+### v3.5.5
+- Fix close and refresh buttons for iPhone 8 and earlier
+
 ### v3.5.4
 - Better third party login support
 
