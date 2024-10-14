@@ -3,6 +3,8 @@
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
 ## Changelog
+### v3.5.6
+- Updated version tracking and default colors
 
 ### v3.5.5
 - Fix close and refresh buttons for iPhone 8 and earlier
