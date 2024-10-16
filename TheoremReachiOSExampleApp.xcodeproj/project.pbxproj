@@ -22,8 +22,8 @@
 		724E78091EF14CF600271C2F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E78081EF14CF600271C2F /* SystemConfiguration.framework */; };
 		724E780B1EF14CFC00271C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780A1EF14CFC00271C2F /* UIKit.framework */; };
 		724E780D1EF14D0300271C2F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780C1EF14D0300271C2F /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B53E38912CBDB68A00A8B4A1 /* TheoremReachSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53E388F2CBDB68400A8B4A1 /* TheoremReachSDK.xcframework */; };
-		B53E38922CBDB68A00A8B4A1 /* TheoremReachSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B53E388F2CBDB68400A8B4A1 /* TheoremReachSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B53E389D2CC01E3A00A8B4A1 /* TheoremReachSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53E389B2CC01E3700A8B4A1 /* TheoremReachSDK.xcframework */; };
+		B53E389E2CC01E3A00A8B4A1 /* TheoremReachSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B53E389B2CC01E3700A8B4A1 /* TheoremReachSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +33,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B53E38922CBDB68A00A8B4A1 /* TheoremReachSDK.xcframework in Embed Frameworks */,
+				B53E389E2CC01E3A00A8B4A1 /* TheoremReachSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,7 +61,7 @@
 		724E78081EF14CF600271C2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		724E780A1EF14CFC00271C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		724E780C1EF14D0300271C2F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		B53E388F2CBDB68400A8B4A1 /* TheoremReachSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TheoremReachSDK.xcframework; sourceTree = "<group>"; };
+		B53E389B2CC01E3700A8B4A1 /* TheoremReachSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TheoremReachSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				724E780D1EF14D0300271C2F /* WebKit.framework in Frameworks */,
-				B53E38912CBDB68A00A8B4A1 /* TheoremReachSDK.xcframework in Frameworks */,
+				B53E389D2CC01E3A00A8B4A1 /* TheoremReachSDK.xcframework in Frameworks */,
 				724E780B1EF14CFC00271C2F /* UIKit.framework in Frameworks */,
 				724E78091EF14CF600271C2F /* SystemConfiguration.framework in Frameworks */,
 				724E78071EF14CEE00271C2F /* Security.framework in Frameworks */,
@@ -88,7 +88,7 @@
 		724E77D81EF14C6500271C2F = {
 			isa = PBXGroup;
 			children = (
-				B53E388F2CBDB68400A8B4A1 /* TheoremReachSDK.xcframework */,
+				B53E389B2CC01E3700A8B4A1 /* TheoremReachSDK.xcframework */,
 				724E77E31EF14C6500271C2F /* TheoremReachiOSExampleApp */,
 				724E77E21EF14C6500271C2F /* Products */,
 				724E77FD1EF14CCD00271C2F /* Frameworks */,
@@ -176,7 +176,6 @@
 				TargetAttributes = {
 					724E77E01EF14C6500271C2F = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = L9K4V5WRGL;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.WAC = {
@@ -360,7 +359,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.entitlements;
-				DEVELOPMENT_TEAM = L9K4V5WRGL;
+				DEVELOPMENT_TEAM = 3W925VK4Q5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -373,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -383,7 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.entitlements;
-				DEVELOPMENT_TEAM = L9K4V5WRGL;
+				DEVELOPMENT_TEAM = 3W925VK4Q5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -396,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

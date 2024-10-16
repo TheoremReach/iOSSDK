@@ -3,6 +3,9 @@
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
 ## Changelog
+### v3.5.7
+- Remove bitcode
+
 ### v3.5.6
 - Updated version tracking and default colors
 
