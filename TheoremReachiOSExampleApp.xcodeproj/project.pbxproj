@@ -372,7 +372,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -395,7 +395,7 @@
 					"@executable_path/Frameworks",
 				);
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.theoremreach.TheoremReachiOSExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
