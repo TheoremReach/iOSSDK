@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,9 +21,12 @@
 		724E78071EF14CEE00271C2F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E78061EF14CEE00271C2F /* Security.framework */; };
 		724E78091EF14CF600271C2F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E78081EF14CF600271C2F /* SystemConfiguration.framework */; };
 		724E780B1EF14CFC00271C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780A1EF14CFC00271C2F /* UIKit.framework */; };
-		724E780D1EF14D0300271C2F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780C1EF14D0300271C2F /* WebKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		B53E389D2CC01E3A00A8B4A1 /* TheoremReachSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B53E389B2CC01E3700A8B4A1 /* TheoremReachSDK.xcframework */; };
-		B53E389E2CC01E3A00A8B4A1 /* TheoremReachSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B53E389B2CC01E3700A8B4A1 /* TheoremReachSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5CCA5802EAC055B00E20277 /* TheoremReachSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CCA57E2EAC055800E20277 /* TheoremReachSDK.xcframework */; };
+		B5CCA5812EAC055B00E20277 /* TheoremReachSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5CCA57E2EAC055800E20277 /* TheoremReachSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5F160E52EA52A0E00D03795 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780C1EF14D0300271C2F /* WebKit.framework */; };
+		B5F160F32EA5316800D03795 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F160F22EA5316800D03795 /* AppTrackingTransparency.framework */; };
+		B5F161072EA53E8200D03795 /* PlaytimeMonetize.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F161052EA53E7E00D03795 /* PlaytimeMonetize.xcframework */; };
+		B5F161082EA53E8200D03795 /* PlaytimeMonetize.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5F161052EA53E7E00D03795 /* PlaytimeMonetize.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,7 +36,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				B53E389E2CC01E3A00A8B4A1 /* TheoremReachSDK.xcframework in Embed Frameworks */,
+				B5F161082EA53E8200D03795 /* PlaytimeMonetize.xcframework in Embed Frameworks */,
+				B5CCA5812EAC055B00E20277 /* TheoremReachSDK.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -61,7 +65,9 @@
 		724E78081EF14CF600271C2F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		724E780A1EF14CFC00271C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		724E780C1EF14D0300271C2F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		B53E389B2CC01E3700A8B4A1 /* TheoremReachSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TheoremReachSDK.xcframework; sourceTree = "<group>"; };
+		B5CCA57E2EAC055800E20277 /* TheoremReachSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TheoremReachSDK.xcframework; sourceTree = "<group>"; };
+		B5F160F22EA5316800D03795 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		B5F161052EA53E7E00D03795 /* PlaytimeMonetize.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:MWCGP9HPPJ:adjoe GmbH"; lastKnownFileType = wrapper.xcframework; path = PlaytimeMonetize.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,8 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				724E780D1EF14D0300271C2F /* WebKit.framework in Frameworks */,
-				B53E389D2CC01E3A00A8B4A1 /* TheoremReachSDK.xcframework in Frameworks */,
+				B5F160E52EA52A0E00D03795 /* WebKit.framework in Frameworks */,
+				B5F160F32EA5316800D03795 /* AppTrackingTransparency.framework in Frameworks */,
 				724E780B1EF14CFC00271C2F /* UIKit.framework in Frameworks */,
 				724E78091EF14CF600271C2F /* SystemConfiguration.framework in Frameworks */,
 				724E78071EF14CEE00271C2F /* Security.framework in Frameworks */,
@@ -79,6 +85,8 @@
 				7239634F20273F7300702509 /* ExternalAccessory.framework in Frameworks */,
 				724E78011EF14CD700271C2F /* CoreTelephony.framework in Frameworks */,
 				724E77FF1EF14CCE00271C2F /* AdSupport.framework in Frameworks */,
+				B5F161072EA53E8200D03795 /* PlaytimeMonetize.xcframework in Frameworks */,
+				B5CCA5802EAC055B00E20277 /* TheoremReachSDK.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +96,8 @@
 		724E77D81EF14C6500271C2F = {
 			isa = PBXGroup;
 			children = (
-				B53E389B2CC01E3700A8B4A1 /* TheoremReachSDK.xcframework */,
+				B5CCA57E2EAC055800E20277 /* TheoremReachSDK.xcframework */,
+				B5F161052EA53E7E00D03795 /* PlaytimeMonetize.xcframework */,
 				724E77E31EF14C6500271C2F /* TheoremReachiOSExampleApp */,
 				724E77E21EF14C6500271C2F /* Products */,
 				724E77FD1EF14CCD00271C2F /* Frameworks */,
@@ -131,6 +140,7 @@
 		724E77FD1EF14CCD00271C2F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5F160F22EA5316800D03795 /* AppTrackingTransparency.framework */,
 				7239634E20273F7300702509 /* ExternalAccessory.framework */,
 				724E780C1EF14D0300271C2F /* WebKit.framework */,
 				724E780A1EF14CFC00271C2F /* UIKit.framework */,
@@ -359,14 +369,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.entitlements;
-				DEVELOPMENT_TEAM = 3W925VK4Q5;
+				DEVELOPMENT_TEAM = SDLAM2U3JW;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TheoremReachiOSExampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -382,14 +392,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.entitlements;
-				DEVELOPMENT_TEAM = 3W925VK4Q5;
+				DEVELOPMENT_TEAM = SDLAM2U3JW;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = TheoremReachiOSExampleApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

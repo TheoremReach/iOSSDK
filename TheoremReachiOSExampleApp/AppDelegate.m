@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <WebKit/WebKit.h>
 
 @interface AppDelegate ()
 
@@ -15,13 +16,21 @@
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    
-    if (@available(iOS 14, *)) {
-        [self askForIDFAPermissions];
+    Class frameworkVCClass = NSClassFromString(@"PlaytimeMonetize.WebOfferwallViewController");
+    Class wkScrollClass = NSClassFromString(@"WKScrollView");
+    if (frameworkVCClass && wkScrollClass) {
+        [[wkScrollClass appearanceWhenContainedInInstancesOfClasses:@[frameworkVCClass]]
+                setBackgroundColor:[TheoremReach colorWithHexString:@"#1B0C47"]];
+        
     } else {
-        [self initializeTheoremReachSDK];
+        if (!frameworkVCClass) {
+                NSLog(@"WARNING: Could not find framework VC class for styling.");
+            }
+            if (!wkScrollClass) {
+                NSLog(@"WARNING: Could not find 'WKScrollView' class for styling.");
+            }
     }
-    
+
     return YES;
 }
 
@@ -37,25 +46,32 @@
     tr.navigationBarTextColor = @"#FFFFFF";
     tr.navigationBarText = @"Demo Title";
     tr.navigationBarColor = @"#211548";
+    [tr setAdjoePlaytimeEnabled:true];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [TheoremReach showRewardCenter];
+    });
 }
 
 - (void)askForIDFAPermissions {
-    if (@available(iOS 14, *)) {
-#if __has_include(<AppTrackingTransparency/AppTrackingTransparency.h>)
-        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus authStatus) {
-            
-            if (authStatus == ATTrackingManagerAuthorizationStatusAuthorized) {
-                NSLog(@"You have allowed the example app to retrieve your IDFA.");
-            } else {
-                NSLog(@"You have denied the example app the right to retrieve your IDFA.");
-            }
-            
-            [self initializeTheoremReachSDK];
-        }];
-#else
-        [self initializeTheoremReachSDK];
-#endif
-    }
+    [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus authStatus) {
+        switch(authStatus) {
+            case ATTrackingManagerAuthorizationStatusNotDetermined :
+                NSLog(@"authStatus Not Determined.");
+                break;
+            case ATTrackingManagerAuthorizationStatusRestricted :
+                NSLog(@"authStatus Restricted.");
+                break;
+            case ATTrackingManagerAuthorizationStatusDenied :
+                NSLog(@"You have denied WizardBucks the right to retrieve your IDFA.");
+                break;
+            case ATTrackingManagerAuthorizationStatusAuthorized :
+                NSLog(@"You have allowed WizardBucks to retrieve your IDFA.");
+                break;
+            default :
+                NSLog(@"authStatus Unkown.");
+        }
+    }];
 }
 
 - (void)onReward: (NSNumber* )quantity {
@@ -81,26 +97,13 @@
     }
 }
 
-// Moment Survey Callbacks
-//-(void)onMomentSurveyOpened {
-//    NSLog(@"TheoremReach onMomentSurveyOpened");
-//}
-//
-//-(void)onMomentSurveyClosed {
-//    NSLog(@"TheoremReach onMomentSurveyClosed");
-//}
-//
-//-(void)onMomentSurveyReceived: (NSNumber*) surveyLength {
-//    NSLog(@"TheoremReach onMomentSurveyReceived: %@", surveyLength);
-//}
-//
-//-(void)onMomentSurveyCompleted {
-//    NSLog(@"TheoremReach onMomentSurveyCompleted");
-//}
-//
-//-(void)onMomentSurveyNotEligible {
-//    NSLog(@"TheoremReach onMomentSurveyNotEligible");
-//}
+- (void)onRewardCenterViewSet {
+    NSLog(@"TheoremReach onRewardCenterViewSet");
+}
+
+- (void)onSessionIdSet {
+    NSLog(@"TheoremReach onSessionIdSet");
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

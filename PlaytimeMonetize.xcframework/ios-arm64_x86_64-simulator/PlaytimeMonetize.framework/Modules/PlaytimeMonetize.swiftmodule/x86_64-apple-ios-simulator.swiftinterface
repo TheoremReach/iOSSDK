@@ -1,0 +1,298 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.1.2 effective-5.10 (swiftlang-6.1.2.1.2 clang-1700.0.13.5)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name PlaytimeMonetize
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -interface-compiler-version 6.1.2
+import Combine
+import DeviceCheck.DCDevice
+import DeveloperToolsSupport
+import DeviceCheck
+import Foundation
+import MetricKit
+import Swift
+import SwiftUI
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimeCampaign : ObjectiveC.NSObject {
+  @objc final public let appName: Swift.String
+  @objc final public let appDescription: Swift.String
+  @objc final public let appID: Swift.String
+  @objc final public let appBundleID: Swift.String?
+  @objc final public let appStoreID: Swift.String?
+  @objc final public let installedAt: Swift.String?
+  @objc final public let uninstalledAt: Swift.String?
+  final public let rewardingExpiresAfter: Swift.Int?
+  @objc final public let rewardingExpiresAt: Swift.String?
+  @objc final public let campaignExpiresAt: Swift.String?
+  @objc final public let eventConfig: PlaytimeMonetize.PlaytimeEventConfig?
+  @objc final public let appCategory: Swift.String?
+  @objc final public let campaignType: Swift.String?
+  final public let featuredPosition: Swift.Int?
+  final public let score: Swift.Float?
+  @objc final public let image: PlaytimeMonetize.PlaytimeMedia?
+  @objc final public let video: PlaytimeMonetize.PlaytimeMedia?
+  @objc final public let iconImage: Swift.String?
+  @objc final public let promotion: PlaytimeMonetize.PlaytimePromotion?
+  @objc final public let isCompleted: Swift.Bool
+  @objc final public let campaignUUID: Swift.String?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimePermissionsResponse : ObjectiveC.NSObject {
+  @objc final public let permissions: PlaytimeMonetize.PlaytimePermissions
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class PlaytimeExtensionsBuilder : ObjectiveC.NSObject {
+  @objc final public func setSubId1(_ subId1: Swift.String?) -> Self
+  @objc final public func setSubId2(_ subId2: Swift.String?) -> Self
+  @objc final public func setSubId3(_ subId3: Swift.String?) -> Self
+  @objc final public func setSubId4(_ subId4: Swift.String?) -> Self
+  @objc final public func setSubId5(_ subId5: Swift.String?) -> Self
+  @objc final public func build() -> PlaytimeMonetize.PlaytimeExtensions
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimeExtensions : ObjectiveC.NSObject, Swift.Sendable {
+  @objc final public let subId1: Swift.String?
+  @objc final public let subId2: Swift.String?
+  @objc final public let subId3: Swift.String?
+  @objc final public let subId4: Swift.String?
+  @objc final public let subId5: Swift.String?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimePermissions : ObjectiveC.NSObject {
+  @objc final public let isTOSAccepted: Swift.Bool
+  @objc final public let isUsagePermissionAccepted: Swift.Bool
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimePromotion : ObjectiveC.NSObject {
+  @objc final public let name: Swift.String?
+  @objc final public let promotionDescription: Swift.String?
+  final public let boostFactor: Swift.Float?
+  @objc final public let startTime: Swift.String?
+  @objc final public let endTime: Swift.String?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc public enum PlaytimeGender : Swift.Int, Swift.Sendable {
+  case male
+  case female
+  case unknown
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc final public class PlaytimeUserProfileBuilder : ObjectiveC.NSObject {
+  @objc final public func setGender(_ gender: PlaytimeMonetize.PlaytimeGender) -> Self
+  @objc final public func setBirthday(_ birthday: Foundation.Date?) -> Self
+  @objc final public func build() -> PlaytimeMonetize.PlaytimeUserProfile
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimeUserProfile : ObjectiveC.NSObject, Swift.Sendable {
+  @objc final public let gender: Swift.String?
+  @objc final public let birthday: Swift.String?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+public enum PlaytimeError : Foundation.LocalizedError, Swift.CustomStringConvertible {
+  case minimalIOSVersionNotSatisfied
+  case featureNotSupported
+  case invalidSDKHash
+  case userIdIsNotProvided
+  case performingOperationBeforeSDKInitialized
+  case campaignWithGivenUUIDNotFound
+  case campaignMissesUUID
+  case catalogCannotBeLoaded
+  case networkError(details: Swift.String?)
+  case cancelledByTheUser
+  case wrongAuthCredentials
+  case failedToOpenURL
+  case internalError(details: Swift.String?)
+  case studioIntegrationIsNotEnabled
+  public var errorDescription: Swift.String? {
+    get
+  }
+  public var description: Swift.String {
+    get
+  }
+  public var detailedError: Swift.String? {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class PlaytimeParamsBuilder : ObjectiveC.NSObject {
+  @objc final public func setUANetwork(_ uaNetwork: Swift.String?) -> PlaytimeMonetize.PlaytimeParamsBuilder
+  @objc final public func setUAChannel(_ uaChannel: Swift.String?) -> PlaytimeMonetize.PlaytimeParamsBuilder
+  @objc final public func setUASubPublisherEncrypted(_ uaSubPublisherEncrypted: Swift.String?) -> PlaytimeMonetize.PlaytimeParamsBuilder
+  @objc final public func setUASubPublisherCleartext(_ uaSubPublisherCleartext: Swift.String?) -> PlaytimeMonetize.PlaytimeParamsBuilder
+  @objc final public func setPlacement(_ placement: Swift.String?) -> PlaytimeMonetize.PlaytimeParamsBuilder
+  @objc final public func build() -> PlaytimeMonetize.PlaytimeParams
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimeParams : ObjectiveC.NSObject, Swift.Sendable {
+  @objc final public let uaNetwork: Swift.String?
+  @objc final public let uaChannel: Swift.String?
+  @objc final public let uaSubPublisherEncrypted: Swift.String?
+  @objc final public let uaSubPublisherCleartext: Swift.String?
+  @objc final public let placement: Swift.String?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+public func == (lhs: PlaytimeMonetize.PlaytimeExtensions, rhs: PlaytimeMonetize.PlaytimeExtensions) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimeOptions, rhs: PlaytimeMonetize.PlaytimeOptions) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimeParams, rhs: PlaytimeMonetize.PlaytimeParams) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimeUserProfile, rhs: PlaytimeMonetize.PlaytimeUserProfile) -> Swift.Bool
+@objc extension PlaytimeMonetize.PlaytimeExtensions {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeOptions {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeParams {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeUserProfile {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeExtensions {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimeOptions {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimeParams {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimeUserProfile {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimeMedia : ObjectiveC.NSObject {
+  @objc final public let portrait: Swift.String?
+  @objc final public let landscape: Swift.String?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimeCampaignsResponse : ObjectiveC.NSObject {
+  @objc final public let campaigns: [PlaytimeMonetize.PlaytimeCampaign]
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class PlaytimeStudio : ObjectiveC.NSObject {
+  @objc public static func getCampaigns(options: PlaytimeMonetize.PlaytimeOptions? = nil) async throws -> PlaytimeMonetize.PlaytimeCampaignsResponse
+  @objc public static func getCampaign(token: Swift.String, options: PlaytimeMonetize.PlaytimeOptions? = nil) async throws -> PlaytimeMonetize.PlaytimeCampaign
+  @objc public static func getInstalledCampaigns(options: PlaytimeMonetize.PlaytimeOptions? = nil) async throws -> PlaytimeMonetize.PlaytimeCampaignsResponse
+  @objc public static func openInStore(campaign: PlaytimeMonetize.PlaytimeCampaign) async throws
+  @objc public static func getPermissions() async throws -> PlaytimeMonetize.PlaytimePermissionsResponse
+  @objc public static func showPermissionsPrompt() async throws -> PlaytimeMonetize.PlaytimePermissionsResponse
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class Playtime : ObjectiveC.NSObject {
+  @objc public static func initialize(userID: Swift.String?, sdkHash: Swift.String, uaNetwork: Swift.String?, uaChannel: Swift.String?, uaSubPublisherCleartext: Swift.String?, uaSubPublisherEncrypted: Swift.String?, placement: Swift.String?) async throws
+  @objc public static func showCatalog(options: PlaytimeMonetize.PlaytimeOptions?) async throws
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @objcMembers final public class PlaytimeOptionsBuilder : ObjectiveC.NSObject {
+  @objc final public func setUserId(_ userId: Swift.String?) -> Self
+  @objc final public func setUserProfile(_ userProfile: PlaytimeMonetize.PlaytimeUserProfile?) -> Self
+  @objc final public func setParams(_ params: PlaytimeMonetize.PlaytimeParams?) -> Self
+  @objc final public func setExtensions(_ extensions: PlaytimeMonetize.PlaytimeExtensions?) -> Self
+  @objc final public func build() -> PlaytimeMonetize.PlaytimeOptions
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimeOptions : ObjectiveC.NSObject, Swift.Sendable {
+  @objc final public let userId: Swift.String?
+  @objc final public let userProfile: PlaytimeMonetize.PlaytimeUserProfile?
+  @objc final public let params: PlaytimeMonetize.PlaytimeParams?
+  @objc final public let extensions: PlaytimeMonetize.PlaytimeExtensions?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers final public class PlaytimeEventConfig : ObjectiveC.NSObject {
+  final public let sequentialActions: [PlaytimeMonetize.PlaytimeRewardAction]
+  final public let bonusActions: [PlaytimeMonetize.PlaytimeRewardAction]
+  final public let timeBasedActions: [PlaytimeMonetize.PlaytimeRewardAction]
+  final public let totalCoinsCollected: Swift.Int
+  final public let totalCoinsPossible: Swift.Int?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers @objcMembers final public class PlaytimeRewardAction : ObjectiveC.NSObject {
+  @objc final public let name: Swift.String?
+  @objc final public let taskDescription: Swift.String?
+  @objc final public let taskType: Swift.String
+  final public let playDuration: Swift.Int?
+  @objc final public let amount: Swift.Int
+  @objc final public let rewardedAt: Swift.String?
+  @objc override final public func isEqual(_ object: Any?) -> Swift.Bool
+  @objc deinit
+}
+public func == (lhs: PlaytimeMonetize.PlaytimeCampaign, rhs: PlaytimeMonetize.PlaytimeCampaign) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimeCampaignsResponse, rhs: PlaytimeMonetize.PlaytimeCampaignsResponse) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimeEventConfig, rhs: PlaytimeMonetize.PlaytimeEventConfig) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimeMedia, rhs: PlaytimeMonetize.PlaytimeMedia) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimePermissions, rhs: PlaytimeMonetize.PlaytimePermissions) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimePermissionsResponse, rhs: PlaytimeMonetize.PlaytimePermissionsResponse) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimePromotion, rhs: PlaytimeMonetize.PlaytimePromotion) -> Swift.Bool
+public func == (lhs: PlaytimeMonetize.PlaytimeRewardAction, rhs: PlaytimeMonetize.PlaytimeRewardAction) -> Swift.Bool
+@objc extension PlaytimeMonetize.PlaytimeCampaign {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeCampaignsResponse {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeEventConfig {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeMedia {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimePermissions {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimePermissionsResponse {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimePromotion {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeRewardAction {
+  @objc convenience dynamic public init(JSONObject: Any) throws
+}
+@objc extension PlaytimeMonetize.PlaytimeCampaign {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimeCampaignsResponse {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimeEventConfig {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimeMedia {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimePermissions {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimePermissionsResponse {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimePromotion {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+@objc extension PlaytimeMonetize.PlaytimeRewardAction {
+  @objc final public func toJSONObject() -> [Swift.String : Any]
+}
+extension PlaytimeMonetize.PlaytimeGender : Swift.Equatable {}
+extension PlaytimeMonetize.PlaytimeGender : Swift.Hashable {}
+extension PlaytimeMonetize.PlaytimeGender : Swift.RawRepresentable {}
