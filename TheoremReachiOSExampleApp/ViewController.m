@@ -18,9 +18,6 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    AppDelegate* appDelegate = (AppDelegate*) [UIApplication sharedApplication].delegate;
-    [appDelegate askForIDFAPermissions];
 }
 
 - (void)didReceiveMemoryWarning {
