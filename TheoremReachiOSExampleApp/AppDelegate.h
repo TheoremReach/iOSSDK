@@ -12,6 +12,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate, TheoremReachRewardDelegate, TheoremReachSurveyDelegate, TheoremReachSurveyAvailableDelegate/*, TheoremReachMomentDelegate */ >
 
 @property (strong, nonatomic) UIWindow *window;
+@property BOOL didBecomeActive;
 - (void)initializeTheoremReachSDK;
 - (void)askForIDFAPermissions;
 @end

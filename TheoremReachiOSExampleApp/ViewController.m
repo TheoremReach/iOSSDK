@@ -18,6 +18,24 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self initializeTheoremReachSDK];
+    });
+}
+
+- (void)initializeTheoremReachSDK {
+    AppDelegate* appDelegate = (AppDelegate*) [UIApplication sharedApplication].delegate;
+    if (!appDelegate.didBecomeActive) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self initializeTheoremReachSDK];
+        });
+        
+        return;
+    }
+    
+    [appDelegate askForIDFAPermissions];
+    [TheoremReach setGoogleSignInDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
