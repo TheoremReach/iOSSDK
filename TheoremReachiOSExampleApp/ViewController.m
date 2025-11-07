@@ -35,7 +35,6 @@
     }
     
     [appDelegate askForIDFAPermissions];
-    [TheoremReach setGoogleSignInDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning {
