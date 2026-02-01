@@ -23,6 +23,8 @@
 		724E780B1EF14CFC00271C2F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780A1EF14CFC00271C2F /* UIKit.framework */; };
 		B5A9BEB62F18384300C7BC59 /* TheoremReachSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5A9BEB42F18383F00C7BC59 /* TheoremReachSDK.xcframework */; };
 		B5A9BEB72F18384300C7BC59 /* TheoremReachSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B5A9BEB42F18383F00C7BC59 /* TheoremReachSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B5A9BEBA2F2FB74100C7BC59 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B5A9BEB82F2FB74100C7BC59 /* README.md */; };
+		B5A9BEBB2F2FB74100C7BC59 /* SWIFT_MIGRATION_PLAN.md in Resources */ = {isa = PBXBuildFile; fileRef = B5A9BEB92F2FB74100C7BC59 /* SWIFT_MIGRATION_PLAN.md */; };
 		B5F160E52EA52A0E00D03795 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 724E780C1EF14D0300271C2F /* WebKit.framework */; };
 		B5F160F32EA5316800D03795 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F160F22EA5316800D03795 /* AppTrackingTransparency.framework */; };
 		B5F161072EA53E8200D03795 /* PlaytimeMonetize.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F161052EA53E7E00D03795 /* PlaytimeMonetize.xcframework */; };
@@ -66,6 +68,8 @@
 		724E780A1EF14CFC00271C2F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		724E780C1EF14D0300271C2F /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		B5A9BEB42F18383F00C7BC59 /* TheoremReachSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = TheoremReachSDK.xcframework; sourceTree = "<group>"; };
+		B5A9BEB82F2FB74100C7BC59 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B5A9BEB92F2FB74100C7BC59 /* SWIFT_MIGRATION_PLAN.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = SWIFT_MIGRATION_PLAN.md; sourceTree = "<group>"; };
 		B5F160F22EA5316800D03795 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		B5F161052EA53E7E00D03795 /* PlaytimeMonetize.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:MWCGP9HPPJ:adjoe GmbH"; lastKnownFileType = wrapper.xcframework; path = PlaytimeMonetize.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,8 @@
 		724E77D81EF14C6500271C2F = {
 			isa = PBXGroup;
 			children = (
+				B5A9BEB82F2FB74100C7BC59 /* README.md */,
+				B5A9BEB92F2FB74100C7BC59 /* SWIFT_MIGRATION_PLAN.md */,
 				B5A9BEB42F18383F00C7BC59 /* TheoremReachSDK.xcframework */,
 				B5F161052EA53E7E00D03795 /* PlaytimeMonetize.xcframework */,
 				724E77E31EF14C6500271C2F /* TheoremReachiOSExampleApp */,
@@ -219,6 +225,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5A9BEBA2F2FB74100C7BC59 /* README.md in Resources */,
+				B5A9BEBB2F2FB74100C7BC59 /* SWIFT_MIGRATION_PLAN.md in Resources */,
 				724E77F41EF14C6500271C2F /* LaunchScreen.storyboard in Resources */,
 				724E77F11EF14C6500271C2F /* Assets.xcassets in Resources */,
 				724E77EF1EF14C6500271C2F /* Main.storyboard in Resources */,
