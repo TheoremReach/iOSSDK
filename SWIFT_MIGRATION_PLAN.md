@@ -357,7 +357,7 @@ Current project structure:
    }
    ```
 
-### Execution Order:
+### Execution Order (Phase 1 - Storyboard):
 1. ✅ **COMPLETED:** Create new Xcode project with specified settings (PREREQUISITE section)
 2. **Next:** Copy frameworks to project directory
 3. **User:** Drag frameworks into Xcode and set to "Embed & Sign" (or agent can guide)
@@ -367,3 +367,413 @@ Current project structure:
 7. **User/Agent:** Configure build settings and link system frameworks
 8. **Agent:** Create initial commit
 9. **User + Agent:** Build and verify together
+
+---
+
+# PHASE 2: SwiftUI Migration
+
+## Overview
+After completing Phase 1 (Storyboard migration), Phase 2 migrates the app to SwiftUI. This is a **UI framework modernization**, converting from UIKit + Storyboards to SwiftUI while preserving the TheoremReach SDK integration logic.
+
+## Project Context (Phase 2)
+- **Location:** `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/`
+- **Project Structure:** `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.xcodeproj`
+- **Reference:** Phase 1 Storyboard project provides working Swift SDK integration code
+- **Migration Type:** UIKit → SwiftUI (complete UI rewrite)
+- **SDK Integration:** Reuse logic from Phase 1, adapt for SwiftUI lifecycle
+
+## Prerequisites (Phase 2)
+
+### PREREQUISITE: User Creates SwiftUI Xcode Project
+**Status:** ✅ COMPLETED
+
+Base SwiftUI Xcode project created with these settings:
+- **Location:** `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/`
+- **Project Structure:** `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.xcodeproj`
+- **Template:** iOS → App
+- **Product Name:** `TheoremReachiOSExampleApp`
+- **Team:** (user's development team)
+- **Organization Identifier:** `com.theoremreach`
+- **Bundle Identifier:** `com.theoremreach.TheoremReachiOSExampleSwiftUI`
+- **Interface:** **SwiftUI** ✅
+- **Language:** Swift
+- **Storage:** None (no Core Data)
+- **Include Tests:** Optional
+
+Current project structure (SwiftUI template):
+- `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.xcodeproj/`
+- `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/TheoremReachiOSExampleAppApp.swift` (App protocol entry point)
+- `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/ContentView.swift` (main SwiftUI view)
+- `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/Assets.xcassets`
+- `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/Preview Content/`
+- `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/Info.plist` (if present)
+
+## Implementation Steps (Phase 2)
+
+### 1. Copy Frameworks to SwiftUI Project
+**Action:** Add binary frameworks (same as Phase 1)
+
+1.1. Copy framework files:
+   - Source: `/Users/andykeller/Code/iOS-Apps/iOSSDK/TheoremReachSDK.xcframework/`
+   - Source: `/Users/andykeller/Code/iOS-Apps/iOSSDK/PlaytimeMonetize.xcframework/`
+   - Destination: `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/TheoremReachiOSExampleApp/`
+   - Copy both xcframework bundles to project directory (next to .xcodeproj)
+
+1.2. Add frameworks to Xcode project:
+   - Drag frameworks into Xcode project navigator
+   - Select "Copy items if needed"
+   - Add to target: TheoremReachiOSExampleApp
+   - Verify "Embed & Sign" in General → Frameworks, Libraries, and Embedded Content
+
+### 2. Copy Resources (Assets Only)
+**Action:** Copy non-UI resources from original project
+
+2.1. Replace assets:
+   - Source: `/Users/andykeller/Code/iOS-Apps/iOSSDK/TheoremReachiOSExampleApp/Assets.xcassets/`
+   - Destination: `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/Assets.xcassets/`
+   - Replace entire Assets.xcassets folder (includes AppIcon)
+
+2.2. Update Info.plist (if separate file exists):
+   - File: `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/Info.plist`
+   - Or add to project's target Info in Xcode
+   - Add `NSUserTrackingUsageDescription` key: "This app uses your data to provide personalized surveys"
+   - Add `NSAppTransportSecurity` dictionary with `NSAllowsArbitraryLoads = YES`
+   - Update `CFBundleDisplayName` to "TheoremReach Demo App"
+   - Configure supported orientations (all 4 orientations)
+
+2.3. Copy entitlements:
+   - Source: `/Users/andykeller/Code/iOS-Apps/iOSSDK/TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.entitlements`
+   - Destination: `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.entitlements`
+   - Update project settings to reference entitlements file
+
+2.4. Copy documentation:
+   - Source: `/Users/andykeller/Code/iOS-Apps/iOSSDK/README.md`
+   - Destination: `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/README.md`
+   - Update README to reference SwiftUI version
+
+### 3. Create SwiftUI App Architecture
+**Action:** Implement SwiftUI app structure with TheoremReach SDK integration
+
+3.1. **Create AppDelegate for SDK Integration**
+   - File: `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/AppDelegate.swift`
+   - SwiftUI apps can still use AppDelegate via `UIApplicationDelegateAdaptor`
+   - Implement SDK initialization in AppDelegate
+   - Implement TheoremReach delegate protocols:
+     - `TheoremReachRewardDelegate`
+     - `TheoremReachSurveyDelegate`
+     - `TheoremReachSurveyAvailableDelegate`
+   - Import required frameworks:
+     - `UIKit`
+     - `SwiftUI`
+     - `WebKit`
+     - `TheoremReachSDK`
+     - `AppTrackingTransparency`
+
+3.2. **Update Main App File**
+   - File: `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/TheoremReachiOSExampleAppApp.swift`
+   - Add `@UIApplicationDelegateAdaptor` to connect AppDelegate
+   - Initialize app with ContentView as root
+   - Handle app lifecycle if needed
+
+3.3. **Create ContentView**
+   - File: `TheoremReachiOSExampleApp/TheoremReachiOSExampleApp/ContentView.swift`
+   - Rewrite UI in SwiftUI:
+     - Replace UIViewController with SwiftUI View
+     - Create "Take Surveys!" button using SwiftUI Button
+     - Add logo/branding using SwiftUI Image
+     - Implement layout using VStack/HStack/ZStack
+   - Access AppDelegate for TheoremReach SDK methods
+   - Call `TheoremReach.getInstance().showRewardCenter()` on button tap
+
+3.4. **Create TheoremReachView (UIViewControllerRepresentable)**
+   - Optional: If TheoremReach SDK requires UIKit integration
+   - Wrap SDK's UIViewController in SwiftUI-compatible wrapper
+   - Handle presentation/dismissal in SwiftUI context
+
+### 4. Xcode Project Configuration
+**Action:** Configure build settings and link frameworks
+
+4.1. Configure build settings:
+   - Set Deployment Target: iOS 14.0 (or iOS 15.0+ for better SwiftUI support)
+   - Verify `TARGETED_DEVICE_FAMILY = 1,2` (iPhone & iPad)
+   - Set `ENABLE_BITCODE = NO` (frameworks don't support bitcode)
+   - Verify `SWIFT_VERSION = 5.0` or latest
+   - Set `CODE_SIGN_ENTITLEMENTS = TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.entitlements`
+
+4.2. Framework integration:
+   - Verify frameworks are in "Embed & Sign" mode
+   - Add framework search paths if needed: `$(PROJECT_DIR)`
+   - Verify "Embed Frameworks" build phase exists
+
+4.3. Link system frameworks:
+   - Add required frameworks in General → Frameworks, Libraries, and Embedded Content:
+     - WebKit.framework
+     - JavaScriptCore.framework
+     - Security.framework
+     - SystemConfiguration.framework
+     - CoreTelephony.framework
+     - AdSupport.framework
+     - ExternalAccessory.framework
+     - AppTrackingTransparency.framework
+   - UIKit and Foundation linked by default
+
+### 5. SwiftUI Code Implementation Details
+
+#### App File Structure:
+```swift
+import SwiftUI
+
+@main
+struct TheoremReachiOSExampleAppApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+                .environmentObject(appDelegate)
+        }
+    }
+}
+```
+
+#### AppDelegate Structure (for SwiftUI):
+```swift
+import UIKit
+import SwiftUI
+import TheoremReachSDK
+import AppTrackingTransparency
+import WebKit
+
+class AppDelegate: NSObject, UIApplicationDelegate, ObservableObject {
+    @Published var surveyAvailable: Bool = false
+
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Initialize TheoremReach SDK
+        initializeTheoremReachSDK()
+
+        // Request IDFA permissions
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.askForIDFAPermissions()
+        }
+
+        return true
+    }
+
+    func initializeTheoremReachSDK() {
+        // SDK initialization logic from Phase 1
+        // Configure TheoremReach
+        // Set delegates
+    }
+
+    func askForIDFAPermissions() {
+        // IDFA permission logic from Phase 1
+    }
+}
+
+// Implement TheoremReach delegate protocols
+extension AppDelegate: TheoremReachRewardDelegate {
+    func onReward(_ quantity: NSNumber) {
+        // Handle reward
+    }
+}
+
+extension AppDelegate: TheoremReachSurveyDelegate {
+    // Implement survey delegate methods
+}
+
+extension AppDelegate: TheoremReachSurveyAvailableDelegate {
+    func theoremreachSurveyAvailable(_ surveyAvailable: Bool) {
+        DispatchQueue.main.async {
+            self.surveyAvailable = surveyAvailable
+        }
+    }
+}
+```
+
+#### ContentView Structure:
+```swift
+import SwiftUI
+import TheoremReachSDK
+
+struct ContentView: View {
+    @EnvironmentObject var appDelegate: AppDelegate
+
+    var body: some View {
+        ZStack {
+            // Background color
+            Color(hex: "#1B0C47")
+                .ignoresSafeArea()
+
+            VStack(spacing: 30) {
+                // Logo
+                Image("AppIcon")
+                    .resizable()
+                    .frame(width: 120, height: 120)
+                    .cornerRadius(20)
+
+                // Title
+                Text("TheoremReach Demo App")
+                    .font(.title)
+                    .foregroundColor(.white)
+
+                // Survey button
+                Button(action: launchTheoremReach) {
+                    Text("Take Surveys!")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(maxWidth: 200)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+
+                // Survey availability indicator
+                if appDelegate.surveyAvailable {
+                    Text("Surveys Available")
+                        .foregroundColor(.green)
+                }
+            }
+        }
+    }
+
+    func launchTheoremReach() {
+        // Get root view controller for presentation
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootViewController = windowScene.windows.first?.rootViewController {
+
+            // Launch TheoremReach SDK
+            TheoremReach.getInstance().showRewardCenter(from: rootViewController)
+        }
+    }
+}
+
+// Helper extension for hex colors
+extension Color {
+    init(hex: String) {
+        let scanner = Scanner(string: hex.trimmingCharacters(in: CharacterSet.alphanumerics.inverted))
+        var hexNumber: UInt64 = 0
+        scanner.scanHexInt64(&hexNumber)
+
+        let r = Double((hexNumber & 0xff0000) >> 16) / 255
+        let g = Double((hexNumber & 0x00ff00) >> 8) / 255
+        let b = Double(hexNumber & 0x0000ff) / 255
+
+        self.init(red: r, green: g, blue: b)
+    }
+}
+```
+
+### 6. Git Repository Setup
+**Action:** Setup version control
+
+6.1. Git repository status:
+   - ✅ Git repository already initialized at `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/TheoremReachiOSExampleApp/.git`
+   - No additional initialization needed
+
+6.2. Update `.gitignore`:
+   - Same as Phase 1 (exclude user-specific Xcode files)
+
+6.3. Initial commit (after migration complete):
+   ```bash
+   cd /Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/TheoremReachiOSExampleApp
+   git add .
+   git commit -m "Initial commit: SwiftUI version of TheoremReach iOS SDK example app
+
+   - Implemented SwiftUI UI architecture
+   - Integrated TheoremReach SDK using UIApplicationDelegateAdaptor
+   - Created AppDelegate for SDK lifecycle management
+   - Built ContentView with SwiftUI Button for survey launch
+   - Added TheoremReachSDK and PlaytimeMonetize frameworks
+   - Configured all required system frameworks
+   "
+   ```
+
+## Key Differences: SwiftUI vs Storyboard
+
+### Architecture Changes:
+- **App Entry:** `@main struct App` instead of `@main class AppDelegate`
+- **Delegates:** `@UIApplicationDelegateAdaptor` to use AppDelegate in SwiftUI
+- **UI:** SwiftUI Views instead of UIViewControllers
+- **Navigation:** No Storyboards, segues, or IBActions
+- **Layout:** Declarative SwiftUI layout (VStack/HStack) instead of Interface Builder
+- **State:** `@Published`, `@EnvironmentObject`, `@State` for reactive updates
+
+### SDK Integration Adaptations:
+- **Initialization:** Same SDK setup in AppDelegate
+- **Delegates:** Same delegate protocols, published properties for SwiftUI reactivity
+- **Presentation:** Must get UIViewController from WindowScene for SDK presentation
+- **Lifecycle:** Use SwiftUI lifecycle modifiers instead of UIViewController lifecycle
+
+### Files Structure Comparison:
+**Phase 1 (Storyboard):**
+- `AppDelegate.swift` (UIApplicationDelegate, window management)
+- `ViewController.swift` (UIViewController)
+- `Main.storyboard` (Interface Builder)
+- `LaunchScreen.storyboard`
+
+**Phase 2 (SwiftUI):**
+- `TheoremReachiOSExampleAppApp.swift` (App protocol entry)
+- `AppDelegate.swift` (UIApplicationDelegate via adaptor)
+- `ContentView.swift` (SwiftUI View)
+- No storyboards
+
+## Verification Steps (Phase 2)
+
+### Build Verification:
+1. Open `/Users/andykeller/Code/iOS-Apps/iOSSDK-Swift-SwiftUI/TheoremReachiOSExampleApp/TheoremReachiOSExampleApp.xcodeproj` in Xcode
+2. Select a simulator target (iPhone 15 Pro or newer for best SwiftUI experience)
+3. Build project (⌘B) - should compile without errors
+4. Verify frameworks are properly embedded
+5. Check for Swift/SwiftUI compilation warnings
+
+### Runtime Verification:
+1. Run app in simulator
+2. Verify SwiftUI interface renders correctly
+3. Test "Take Surveys!" button launches TheoremReach SDK
+4. Verify IDFA permission prompt appears (on first launch)
+5. Verify TheoremReach SDK initializes (check console logs)
+6. Confirm TheoremReach reward center opens
+7. Test delegate callbacks update SwiftUI state:
+   - Survey availability indicator updates
+   - Reward notifications work
+8. Test app rotation/orientation changes
+
+### SwiftUI-Specific Verification:
+1. Verify SwiftUI previews work (if implemented)
+2. Check state management (@Published properties update UI)
+3. Verify environment object injection works
+4. Test UIKit-SwiftUI bridge for SDK presentation
+5. Verify color/styling matches original app design
+
+## Execution Order (Phase 2 - SwiftUI):
+1. ✅ **COMPLETED:** Create new SwiftUI Xcode project
+2. **Next:** Copy frameworks to project directory
+3. **User:** Drag frameworks into Xcode and set to "Embed & Sign"
+4. **Agent:** Copy assets and resources
+5. **Agent:** Create AppDelegate.swift for SDK integration
+6. **Agent:** Update App file with UIApplicationDelegateAdaptor
+7. **Agent:** Create ContentView with SwiftUI UI
+8. **User/Agent:** Configure build settings and link system frameworks
+9. **Agent:** Test SDK integration and fix any issues
+10. **Agent:** Create initial commit
+11. **User + Agent:** Build and verify together
+
+## Notes (Phase 2)
+
+### SwiftUI Considerations:
+1. **SDK Presentation:** TheoremReach SDK likely returns UIViewController. Must present from root UIViewController obtained from WindowScene.
+
+2. **App Lifecycle:** SwiftUI app lifecycle differs from UIKit. Use `@UIApplicationDelegateAdaptor` to preserve SDK initialization in AppDelegate.
+
+3. **State Management:** Use `@Published` properties in AppDelegate and `@EnvironmentObject` to make SDK state available to SwiftUI views.
+
+4. **iOS Version:** SwiftUI works best on iOS 15+. Consider raising deployment target if targeting modern SwiftUI features.
+
+5. **Preview Support:** SwiftUI previews may not work with SDK integration. Use runtime testing in simulator.
+
+### Migration Strategy:
+1. **Reference Phase 1:** Use completed Storyboard migration as reference for SDK integration logic
+2. **UI Rewrite:** Don't try to convert Storyboard to SwiftUI 1:1. Design fresh SwiftUI interface
+3. **Test Incrementally:** Build and test after each major component (AppDelegate → App file → ContentView)
+4. **UIKit Bridge:** Be prepared to use `UIViewControllerRepresentable` if SDK requires deep UIKit integration
