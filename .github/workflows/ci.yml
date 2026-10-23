@@ -1,0 +1,70 @@
+name: CI
+
+# Every push builds the Swift package and the Objective-C example app on GitHub's macOS runner, unsigned, launches
+# the app on a simulator and keeps a screenshot and its log.
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+# shell: bash runs each step as bash -eo pipefail, so a failed xcodebuild fails its step even when piped into
+# xcbeautify. The default shell (bash -e) only sees xcbeautify's exit status.
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    name: Build and launch on the simulator
+    runs-on: macos-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Show the Xcode in use
+        run: xcodebuild -version
+
+      - name: Check the Swift package
+        run: |
+          swift package dump-package > /dev/null
+          xcodebuild build -scheme TheoremReachSDK -destination 'generic/platform=iOS Simulator' \
+            -derivedDataPath build/package | xcbeautify
+
+      # arm64 only: GitHub's macOS runners and their simulators are Apple silicon.
+      - name: Build the example app
+        run: >
+          xcodebuild build -project TheoremReachiOSExampleApp.xcodeproj -scheme TheoremReachiOSExampleApp
+          -configuration Debug -destination 'generic/platform=iOS Simulator' -derivedDataPath build/dd
+          ARCHS=arm64 CODE_SIGNING_ALLOWED=NO | xcbeautify
+
+      # The app has to come up and stay up: a crash at launch, or a framework that doesn't load, ends it.
+      - name: Launch the app on a simulator
+        run: |
+          udid=$(xcrun simctl list devices available --json \
+            | jq -r '[.devices | to_entries[] | select(.key | contains("iOS")) | .value[] | select(.name | startswith("iPhone"))][0].udid')
+          xcrun simctl boot "$udid"
+          xcrun simctl bootstatus "$udid" -b
+          xcrun simctl install "$udid" build/dd/Build/Products/Debug-iphonesimulator/TheoremReachiOSExampleApp.app
+          xcrun simctl launch "$udid" com.theoremreach.TheoremReachiOSExample
+          sleep 20
+          mkdir -p build/launch
+          xcrun simctl io "$udid" screenshot build/launch/launch.png
+          xcrun simctl spawn "$udid" log show --last 2m --style compact \
+            --predicate 'process == "TheoremReachiOSExampleApp"' > build/launch/app.log || true
+          # Still running 20 s in: launchctl lists the app with its pid.
+          xcrun simctl spawn "$udid" launchctl list | grep "UIKitApplication:com.theoremreach.TheoremReachiOSExample" \
+            | awk '{ print $1 }' | grep -qE '^[0-9]+$'
+
+      - name: Keep the launch screenshot and log
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: simulator-launch
+          path: build/launch
+          if-no-files-found: warn
