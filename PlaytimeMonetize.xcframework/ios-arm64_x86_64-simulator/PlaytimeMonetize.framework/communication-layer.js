@@ -7,13 +7,13 @@ function _iosnativesdk_generateUUID() {
 const _iosnativesdk_requestPromises = {};
 
 function _iosnativesdk_handleResponse(response) {
-    const { id, data, error } = response;
+    const { id, data, error, errorHTTPResponseBody } = response;
     
     if (_iosnativesdk_requestPromises[id]) {
         if (error) {
-            const errorInstance = new NativeSDKError(error);
+            const errorInstance = new NativeSDKError(error, errorHTTPResponseBody);
             _iosnativesdk_requestPromises[id].reject(errorInstance);
-            console.log(`Did resolve promise for request ID: ${id}, Request Data: ${JSON.stringify(data)}`);
+            console.log(`Did resolve promise for request ID: ${id}, Request Error: ${error}`);
         } else {
             _iosnativesdk_requestPromises[id].resolve(data);
             console.log(`Did resolve promise for request ID: ${id}, Request Data: ${JSON.stringify(data)}`);
@@ -28,8 +28,9 @@ function _iosnativesdk_handleResponse(response) {
 // Section: Frontent API
 
 class NativeSDKError extends Error {
-  constructor(input) {
+  constructor(input, errorHTTPResponseBody = null) {
     super(input);
+    this.errorHTTPResponseBody = errorHTTPResponseBody;
     if (input.includes(":")) {
       const [name, ...messageParts] = input.split(":");
       this.type = name.trim();

@@ -6,15 +6,19 @@
 	<dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Assets.car</key>
 		<data>
-		FcSX6oUAWahqaGRgCxIikjfPMF4=
+		sD7mbrNTEXi/OOvWW7xHW698yUc=
+		</data>
+		<key>ios-arm64/PlaytimeMonetize.framework/Config.xcconfig</key>
+		<data>
+		sopnrWHc/a5BRj2BnDShuqKrM/0=
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/Headers/PlaytimeMonetize-Swift.h</key>
 		<data>
-		VsjzrRx5wqA6NYv1Q3ja+M/wOJw=
+		wB/j6RCEbzkxjrWrLtvQfbjXoA4=
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/Info.plist</key>
 		<data>
-		F5433ny5O0d27kfQym1YByY+OLE=
+		d2emJ3j8Qv04oZ4BsjbunYVXViw=
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
@@ -22,23 +26,23 @@
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		s9p1WUwHPIaZXWMxhMcUlfN5lt4=
+		8+MLzh6Y+H4l9gjAK8J3MXwxwNQ=
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		OxHB5URoWUrQOAJYBbvQOaJe3i8=
+		Ee/snLe1ZyADVqa3tnbKJcsUJbg=
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		s9p1WUwHPIaZXWMxhMcUlfN5lt4=
+		8+MLzh6Y+H4l9gjAK8J3MXwxwNQ=
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/module.modulemap</key>
 		<data>
-		0kmXv649vf1PbSyuyzHlkhxPJ+E=
+		0Sdc2j5IWPQ/QGg9PIbOdbop3Zk=
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/PlaytimeMonetize</key>
 		<data>
-		rUXZ3jkvynJOn9XzA9uDDYoyGc8=
+		5sS5luru+8UVFkIp3mT0044ZZoo=
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -46,19 +50,23 @@
 		</data>
 		<key>ios-arm64/PlaytimeMonetize.framework/communication-layer.js</key>
 		<data>
-		/BBVMTx+nAjA3dgLNoCQ4IqfwgY=
+		JHA6UuycDZadKjx1ckR4qdjKE2I=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Assets.car</key>
 		<data>
-		FcSX6oUAWahqaGRgCxIikjfPMF4=
+		sD7mbrNTEXi/OOvWW7xHW698yUc=
+		</data>
+		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Config.xcconfig</key>
+		<data>
+		sopnrWHc/a5BRj2BnDShuqKrM/0=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Headers/PlaytimeMonetize-Swift.h</key>
 		<data>
-		p7sNUqOAmHPZFprHH3Hl4rtaDIM=
+		dgXhOHJUsdcM4R67U1xUxmK5n40=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Info.plist</key>
 		<data>
-		NQXi+jAKzALiqB96oBWR7mZjLtc=
+		chPOQf3Ge8AUp102vU3yUoJNaeo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -66,15 +74,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ky0Rwt0WzZAAqwX0blvlpxyJouA=
+		IN1mi5cANw4m3dWckzuoGMmFDno=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Rc6gBl5A0fxr8y1+v20e1wlTOQQ=
+		7UIPq126to5CWKojXhTISo+cQog=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ky0Rwt0WzZAAqwX0blvlpxyJouA=
+		IN1mi5cANw4m3dWckzuoGMmFDno=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -82,23 +90,23 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		sKiV6GQb7Fpmjo6xO66MVCNL3+E=
+		TRoF+GItTbImiG1R6ISwgs1pYKE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MLIsNeM7C0wUBotb7yU9qKCABwg=
+		M+3vv+iR3sKJyujZMbvcKkfyZnc=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		sKiV6GQb7Fpmjo6xO66MVCNL3+E=
+		TRoF+GItTbImiG1R6ISwgs1pYKE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/module.modulemap</key>
 		<data>
-		0kmXv649vf1PbSyuyzHlkhxPJ+E=
+		0Sdc2j5IWPQ/QGg9PIbOdbop3Zk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/PlaytimeMonetize</key>
 		<data>
-		AHlRHK9wGPwhrRqDziqu3XvnUzo=
+		u5Hp/YIMGWJAKzyggp5jYqhXkTg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -106,54 +114,45 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/_CodeSignature/CodeResources</key>
 		<data>
-		rqK+Ih5tcG3agPL+vPM5R8MbYbM=
+		OEXxoUmNosUhNR0cl75gvouLOH4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/communication-layer.js</key>
 		<data>
-		/BBVMTx+nAjA3dgLNoCQ4IqfwgY=
+		JHA6UuycDZadKjx1ckR4qdjKE2I=
 		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FcSX6oUAWahqaGRgCxIikjfPMF4=
-			</data>
 			<key>hash2</key>
 			<data>
-			CdwWhCOw+gQEotl5MqrUUPpJBme5Or2W5frmBKt7BRY=
+			ZrWgPxMkdOCo5IdhoxG3ni8Mcq74yJgvv8juqUwyo/E=
+			</data>
+		</dict>
+		<key>ios-arm64/PlaytimeMonetize.framework/Config.xcconfig</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3u65iUrJJjmWNyXaPGg1fb4Bfv/7dFSDC75FA3KYXQg=
 			</data>
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Headers/PlaytimeMonetize-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			VsjzrRx5wqA6NYv1Q3ja+M/wOJw=
-			</data>
 			<key>hash2</key>
 			<data>
-			J+H1plMz4jPotGMpMSigc4K6vM4DAeAbaEPM13OtMLM=
+			9QOz1QB2oPAxyzHdyuqTonTZ7yzVcz1cXb6m2yFw4cA=
 			</data>
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			F5433ny5O0d27kfQym1YByY+OLE=
-			</data>
 			<key>hash2</key>
 			<data>
-			0qXjq/oynGQO6dG9qoZBTkk3SoZnL/8/4efX1P+j9ZQ=
+			f5qaPcEpwZE5wx6bFp0DNej60eQi6HhQQN9MnYz6Xkg=
 			</data>
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			gcwBsH4BgyFY4sVtNt+/xOKS3vY=
-			</data>
 			<key>hash2</key>
 			<data>
 			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
@@ -161,65 +160,41 @@
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			s9p1WUwHPIaZXWMxhMcUlfN5lt4=
-			</data>
 			<key>hash2</key>
 			<data>
-			eYIV9WjGSGfpb+cJFA/gu00M+XxwYC5gRrqjGxYlyLQ=
+			JMcTJnmGsEavoapqJzZOySfJyA6jrcpCexfL/RSkhq0=
 			</data>
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			OxHB5URoWUrQOAJYBbvQOaJe3i8=
-			</data>
 			<key>hash2</key>
 			<data>
-			Gbz4nJQWsKxsWFYpFLjcDSUNTEIZXis/XL631YSI31w=
+			fwHfVwIkvhb32B7pZbmRPi3PRmp/Aa2uEN37LhHk+kY=
 			</data>
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			s9p1WUwHPIaZXWMxhMcUlfN5lt4=
-			</data>
 			<key>hash2</key>
 			<data>
-			eYIV9WjGSGfpb+cJFA/gu00M+XxwYC5gRrqjGxYlyLQ=
+			JMcTJnmGsEavoapqJzZOySfJyA6jrcpCexfL/RSkhq0=
 			</data>
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			0kmXv649vf1PbSyuyzHlkhxPJ+E=
-			</data>
 			<key>hash2</key>
 			<data>
-			xwjBz+Yq0M/lRaAsLBd5t6FMwOvho7bGsAua4Fg068M=
+			IMICiTpb8FEh1XQQavo4XFKJpe8Q8WCk88P4UBhNSoI=
 			</data>
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/PlaytimeMonetize</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rUXZ3jkvynJOn9XzA9uDDYoyGc8=
-			</data>
 			<key>hash2</key>
 			<data>
-			Y4rztmsqCfOZev+CpYu1VUX0rc8bJ26wiE4pXfnUTDM=
+			+rcB0DcVvKM+wdsktP/rc5hOAcHSOJKldNkJ84kqND8=
 			</data>
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/PrivacyInfo.xcprivacy</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nxhwJfhef57Vh4OKFZmH1aa9Rt0=
-			</data>
 			<key>hash2</key>
 			<data>
 			mJtnvj2TUHS0CoH9frfFY1YEYZ00c7u2ovscy2YHudA=
@@ -227,54 +202,41 @@
 		</dict>
 		<key>ios-arm64/PlaytimeMonetize.framework/communication-layer.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/BBVMTx+nAjA3dgLNoCQ4IqfwgY=
-			</data>
 			<key>hash2</key>
 			<data>
-			L9w85dJFQOuD8pIJwYHGA1dUCYo09dIrqSBN1QfgIP4=
+			bSdcFTv3y7Utu5gDEM2gzB/foiYE7n/YUUMMqU2C5oA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Assets.car</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			FcSX6oUAWahqaGRgCxIikjfPMF4=
-			</data>
 			<key>hash2</key>
 			<data>
-			CdwWhCOw+gQEotl5MqrUUPpJBme5Or2W5frmBKt7BRY=
+			ZrWgPxMkdOCo5IdhoxG3ni8Mcq74yJgvv8juqUwyo/E=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Config.xcconfig</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3u65iUrJJjmWNyXaPGg1fb4Bfv/7dFSDC75FA3KYXQg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Headers/PlaytimeMonetize-Swift.h</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			p7sNUqOAmHPZFprHH3Hl4rtaDIM=
-			</data>
 			<key>hash2</key>
 			<data>
-			f9lhUZn78YAphcz66R9TIlJidHKJQTqPw/JOX4YjQms=
+			m5n/v1NBkNgpUn+jknU0vZYadOxmbK9QYqA0Q14tE7A=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Info.plist</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			NQXi+jAKzALiqB96oBWR7mZjLtc=
-			</data>
 			<key>hash2</key>
 			<data>
-			UFfIh+SBDcAbnovoXDLYCOYwFTBKiE1RhnaA0dzgmpU=
+			AytaDZGtqwod6QU1uZfTLs1/u2Ca+pp1eOkKcQKXQFs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			gcwBsH4BgyFY4sVtNt+/xOKS3vY=
-			</data>
 			<key>hash2</key>
 			<data>
 			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
@@ -282,43 +244,27 @@
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ky0Rwt0WzZAAqwX0blvlpxyJouA=
-			</data>
 			<key>hash2</key>
 			<data>
-			3ASIyn7IH6GDH+0aHqdSyJYWAUVUciHz7l6677OVHbc=
+			muiLSDWPRBQjSMEP7aym4UtuO5x+M9oMvOtAhUHeO9g=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			Rc6gBl5A0fxr8y1+v20e1wlTOQQ=
-			</data>
 			<key>hash2</key>
 			<data>
-			D2/nYU0CjfSL42rt0baiUy2dg+OlSTijRYjfDJah2gA=
+			NJ1nPJa18hKFcWBCLGx21Yc8QCMlIXChioFXxVAJ9vc=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			ky0Rwt0WzZAAqwX0blvlpxyJouA=
-			</data>
 			<key>hash2</key>
 			<data>
-			3ASIyn7IH6GDH+0aHqdSyJYWAUVUciHz7l6677OVHbc=
+			muiLSDWPRBQjSMEP7aym4UtuO5x+M9oMvOtAhUHeO9g=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			gcwBsH4BgyFY4sVtNt+/xOKS3vY=
-			</data>
 			<key>hash2</key>
 			<data>
 			Qnesa0n4URGWAopawg9bGx36dUwkYV00BoCJ8LFzlyg=
@@ -326,65 +272,41 @@
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sKiV6GQb7Fpmjo6xO66MVCNL3+E=
-			</data>
 			<key>hash2</key>
 			<data>
-			hwtEDYsxdPmRu0UPgbLnMcml0GFFtWUC29afMDCGre8=
+			/iqxPQuLWR4OR1dvCyKHl2itl75ybrIdalIY4ND7zfE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			MLIsNeM7C0wUBotb7yU9qKCABwg=
-			</data>
 			<key>hash2</key>
 			<data>
-			t3hJKCCbxATjZQjC0FHFTDgd8yGZdFMHOAunFCYrDqk=
+			F8xdIUqBW+s8KxHG2EGDT6vneSEeVrN/Gsd6EMCYN0o=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			sKiV6GQb7Fpmjo6xO66MVCNL3+E=
-			</data>
 			<key>hash2</key>
 			<data>
-			hwtEDYsxdPmRu0UPgbLnMcml0GFFtWUC29afMDCGre8=
+			/iqxPQuLWR4OR1dvCyKHl2itl75ybrIdalIY4ND7zfE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/Modules/module.modulemap</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			0kmXv649vf1PbSyuyzHlkhxPJ+E=
-			</data>
 			<key>hash2</key>
 			<data>
-			xwjBz+Yq0M/lRaAsLBd5t6FMwOvho7bGsAua4Fg068M=
+			IMICiTpb8FEh1XQQavo4XFKJpe8Q8WCk88P4UBhNSoI=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/PlaytimeMonetize</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			AHlRHK9wGPwhrRqDziqu3XvnUzo=
-			</data>
 			<key>hash2</key>
 			<data>
-			0rD+v/FDCU+A/BLulet0RRt5ea69cbF/5ocuCc3lskY=
+			xPxAeIPoka2RfBxM7mqrEwJOjHLo6zery2iNZ+zeCUk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/PrivacyInfo.xcprivacy</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			nxhwJfhef57Vh4OKFZmH1aa9Rt0=
-			</data>
 			<key>hash2</key>
 			<data>
 			mJtnvj2TUHS0CoH9frfFY1YEYZ00c7u2ovscy2YHudA=
@@ -392,24 +314,16 @@
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/_CodeSignature/CodeResources</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			rqK+Ih5tcG3agPL+vPM5R8MbYbM=
-			</data>
 			<key>hash2</key>
 			<data>
-			kdOR55eQ0HT80Mn8niRdDLOnVbq96uYRV+68JQ5/ZHA=
+			SplxwDMp2S1MpRKEbF8R2/DB1E9724IJZVQGzUPzjEY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/PlaytimeMonetize.framework/communication-layer.js</key>
 		<dict>
-			<key>hash</key>
-			<data>
-			/BBVMTx+nAjA3dgLNoCQ4IqfwgY=
-			</data>
 			<key>hash2</key>
 			<data>
-			L9w85dJFQOuD8pIJwYHGA1dUCYo09dIrqSBN1QfgIP4=
+			bSdcFTv3y7Utu5gDEM2gzB/foiYE7n/YUUMMqU2C5oA=
 			</data>
 		</dict>
 	</dict>

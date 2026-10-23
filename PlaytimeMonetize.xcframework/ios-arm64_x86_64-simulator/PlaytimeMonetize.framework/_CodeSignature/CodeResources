@@ -6,15 +6,19 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		FcSX6oUAWahqaGRgCxIikjfPMF4=
+		sD7mbrNTEXi/OOvWW7xHW698yUc=
+		</data>
+		<key>Config.xcconfig</key>
+		<data>
+		sopnrWHc/a5BRj2BnDShuqKrM/0=
 		</data>
 		<key>Headers/PlaytimeMonetize-Swift.h</key>
 		<data>
-		p7sNUqOAmHPZFprHH3Hl4rtaDIM=
+		dgXhOHJUsdcM4R67U1xUxmK5n40=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		NQXi+jAKzALiqB96oBWR7mZjLtc=
+		chPOQf3Ge8AUp102vU3yUoJNaeo=
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -22,19 +26,19 @@
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ky0Rwt0WzZAAqwX0blvlpxyJouA=
+		IN1mi5cANw4m3dWckzuoGMmFDno=
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		Rc6gBl5A0fxr8y1+v20e1wlTOQQ=
+		7UIPq126to5CWKojXhTISo+cQog=
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ky0Rwt0WzZAAqwX0blvlpxyJouA=
+		IN1mi5cANw4m3dWckzuoGMmFDno=
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		qIGhmW0UrUmJP+IZ/MyNJtLFNUU=
+		Z5/lJXohdeGO3MLXKxm0sUavJhw=
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
@@ -42,23 +46,23 @@
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		sKiV6GQb7Fpmjo6xO66MVCNL3+E=
+		TRoF+GItTbImiG1R6ISwgs1pYKE=
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		MLIsNeM7C0wUBotb7yU9qKCABwg=
+		M+3vv+iR3sKJyujZMbvcKkfyZnc=
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		sKiV6GQb7Fpmjo6xO66MVCNL3+E=
+		TRoF+GItTbImiG1R6ISwgs1pYKE=
 		</data>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		997T6yl8fWMJnOCOCVO1XHKDj7Y=
+		A2g/GTSk65JLtZn50Dssc2Jg0y4=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		0kmXv649vf1PbSyuyzHlkhxPJ+E=
+		0Sdc2j5IWPQ/QGg9PIbOdbop3Zk=
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
@@ -66,7 +70,7 @@
 		</data>
 		<key>communication-layer.js</key>
 		<data>
-		/BBVMTx+nAjA3dgLNoCQ4IqfwgY=
+		JHA6UuycDZadKjx1ckR4qdjKE2I=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,14 +79,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CdwWhCOw+gQEotl5MqrUUPpJBme5Or2W5frmBKt7BRY=
+			ZrWgPxMkdOCo5IdhoxG3ni8Mcq74yJgvv8juqUwyo/E=
+			</data>
+		</dict>
+		<key>Config.xcconfig</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3u65iUrJJjmWNyXaPGg1fb4Bfv/7dFSDC75FA3KYXQg=
 			</data>
 		</dict>
 		<key>Headers/PlaytimeMonetize-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			f9lhUZn78YAphcz66R9TIlJidHKJQTqPw/JOX4YjQms=
+			m5n/v1NBkNgpUn+jknU0vZYadOxmbK9QYqA0Q14tE7A=
 			</data>
 		</dict>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
@@ -96,28 +107,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3ASIyn7IH6GDH+0aHqdSyJYWAUVUciHz7l6677OVHbc=
+			muiLSDWPRBQjSMEP7aym4UtuO5x+M9oMvOtAhUHeO9g=
 			</data>
 		</dict>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			D2/nYU0CjfSL42rt0baiUy2dg+OlSTijRYjfDJah2gA=
+			NJ1nPJa18hKFcWBCLGx21Yc8QCMlIXChioFXxVAJ9vc=
 			</data>
 		</dict>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3ASIyn7IH6GDH+0aHqdSyJYWAUVUciHz7l6677OVHbc=
+			muiLSDWPRBQjSMEP7aym4UtuO5x+M9oMvOtAhUHeO9g=
 			</data>
 		</dict>
 		<key>Modules/PlaytimeMonetize.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V8urFVtcNIHFuLOAiTGZaXmpi87E2VcfyRbYdiuyqRs=
+			UzSmMxvRCZcwzJSMmsBkxTk+n4pjivd00sOmmMFt2j8=
 			</data>
 		</dict>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
@@ -131,35 +142,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			hwtEDYsxdPmRu0UPgbLnMcml0GFFtWUC29afMDCGre8=
+			/iqxPQuLWR4OR1dvCyKHl2itl75ybrIdalIY4ND7zfE=
 			</data>
 		</dict>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			t3hJKCCbxATjZQjC0FHFTDgd8yGZdFMHOAunFCYrDqk=
+			F8xdIUqBW+s8KxHG2EGDT6vneSEeVrN/Gsd6EMCYN0o=
 			</data>
 		</dict>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hwtEDYsxdPmRu0UPgbLnMcml0GFFtWUC29afMDCGre8=
+			/iqxPQuLWR4OR1dvCyKHl2itl75ybrIdalIY4ND7zfE=
 			</data>
 		</dict>
 		<key>Modules/PlaytimeMonetize.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			miZk3tD56W0zQ7d45EnlFCoZ7sadQQKxY6NHAwEB4EQ=
+			un5q6bA7DFzKTcE9K71BxtgUdLx5g7lmcxbuyQDk+7Y=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xwjBz+Yq0M/lRaAsLBd5t6FMwOvho7bGsAua4Fg068M=
+			IMICiTpb8FEh1XQQavo4XFKJpe8Q8WCk88P4UBhNSoI=
 			</data>
 		</dict>
 		<key>PrivacyInfo.xcprivacy</key>
@@ -173,7 +184,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			L9w85dJFQOuD8pIJwYHGA1dUCYo09dIrqSBN1QfgIP4=
+			bSdcFTv3y7Utu5gDEM2gzB/foiYE7n/YUUMMqU2C5oA=
 			</data>
 		</dict>
 	</dict>
