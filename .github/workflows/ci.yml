@@ -30,11 +30,15 @@ jobs:
       - name: Show the Xcode in use
         run: xcodebuild -version
 
+      # Built from a copy holding only the package: beside the example's .xcodeproj, xcodebuild picks the project.
       - name: Check the Swift package
         run: |
           swift package dump-package > /dev/null
+          pkg=$(mktemp -d)
+          cp -R Package.swift TheoremReachSDK.xcframework "$pkg"/
+          cd "$pkg"
           xcodebuild build -scheme TheoremReachSDK -destination 'generic/platform=iOS Simulator' \
-            -derivedDataPath build/package | xcbeautify
+            -derivedDataPath build | xcbeautify
 
       # arm64 only: GitHub's macOS runners and their simulators are Apple silicon.
       - name: Build the example app
