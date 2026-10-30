@@ -30,6 +30,14 @@ jobs:
       - name: Show the Xcode in use
         run: xcodebuild -version
 
+      # Which SDK build the package ships: each slice names its version and the commit it was built from.
+      - name: Show the SDK build
+        run: |
+          for plist in TheoremReachSDK.xcframework/*/TheoremReachSDK.framework/Info.plist; do
+            echo "$plist: $(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$plist"), built from" \
+              "$(/usr/libexec/PlistBuddy -c 'Print :TR_SOURCE_COMMIT' "$plist" 2> /dev/null || echo 'an unrecorded commit')"
+          done
+
       # Built from a copy holding only the package: beside the example's .xcodeproj, xcodebuild picks the project.
       - name: Check the Swift package
         run: |
