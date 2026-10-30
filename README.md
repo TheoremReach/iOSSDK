@@ -6,22 +6,29 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 ### v3.6.0
 - A Swift package: in Xcode, add `https://github.com/TheoremReach/iOSSDK` and its TheoremReachSDK product
 - Ads open in the browser, not in the reward center
-- A thin loading bar replaces the loading spinner. `setLoadingBarColor:` sets its color, #FC178D by default
+- A thin loading bar replaces the loading spinner. `setLoadingBarColor:` sets its color, #FC178D by default.
+  `initWithApiKey:` resets the colors, this one included, so set them after it
 - `setMmpProvider:installId:` (Swift: `setMmpInstallId(provider:installId:)`) passes the install id a mobile
   measurement partner, such as Apptrove, gave the install to the reward center. Call it before the first
   `showRewardCenter`
-- `showRewardCenterFromViewController:` presents the reward center from your own view controller, for scene-based apps
+- `showRewardCenterFromViewController:` and `showRewardCenter:fromViewController:` (Swift: `showRewardCenter(from:)` and
+  `showRewardCenter(_:from:)`) present the reward center from your own view controller, for scene-based apps
 - Callbacks arrive on the main thread, so move network or other long work in them off it. A reward is confirmed only
   after `onReward:` returns
-- User ids are sent percent-encoded, so ids with +, &, ; or # arrive intact
+- User ids are sent percent-encoded, so ids with +, &, ; or # arrive intact. A user whose id has one of them may show
+  up as a new user after the update
 - The color setters ignore an invalid color and keep the previous one. They take #RGB, #ARGB, #RRGGBB and #AARRGGBB,
   with or without the #
 - Playtime needs adjoe 4.3 to 4.5. With Playtime turned on and no adjoe 4.3 to 4.5, the Playtime card no longer
-  waits: the wall hears that no games are available
-- The reward center reloads if its web content process ends, and a cancelled page load no longer shows "Unexpected
-  Error"
+  waits: the wall hears that no games are available, and a launch gets the usual error
+- The reward center reloads if its web content process ends; a second time within ten seconds, X brings it back. A
+  cancelled page load no longer shows "Unexpected Error" or leaves the loading bar
+- Edge swipes go back and forward in the reward center
 - The close and refresh buttons are built in, with VoiceOver names, instead of downloaded before each open
+- `rewardCenterViewController` is nil once the reward center closes, and Moments surveys present full screen
 - `setWebViewInspectable:` lets Safari's Web Inspector attach to the reward center in your debug builds
+- Removed: `TRSurveyView`'s `activityIndicator`, `overlay` and `sendPlaytimeInitialized`, and `TRSurveyViewController`'s
+  `initPlaytime:`. `TRSurveyView`'s `delegate` is weak
 
 ### v3.5.8
 - Miscellaneous updates
@@ -79,7 +86,7 @@ In Xcode, choose File > Add Package Dependencies, enter `https://github.com/Theo
 Add the following to your `podfile`
 
   ```groovy
-  pod 'TheoremReach', ‘3.6.0’
+  pod 'TheoremReach', '3.6.0'
   ```
 
   #### Manual:
