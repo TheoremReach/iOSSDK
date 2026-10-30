@@ -79,10 +79,11 @@
 @property NSString *_playtimeSubPublisherCleartext;
 @property NSString *_playtimeSubPublisherEncrypted;
 @property NSString *_playtimeSdkHash;
-@property NSString *navigationBarColor;
-@property NSString *bottomBarColor;
+@property (nonatomic) NSString *navigationBarColor;
+@property (nonatomic) NSString *bottomBarColor;
 @property NSString *navigationBarText;
-@property NSString *navigationBarTextColor;
+@property (nonatomic) NSString *navigationBarTextColor;
+@property (nonatomic) NSString *loadingBarColor;
 @property TRSurveyViewController *rewardCenterViewController;
 
 @property (weak, nonatomic) id<TheoremReachRewardDelegate> rewardListenerDelegate;
@@ -186,10 +187,14 @@
 - (void)setPlaytimeSdkHash: (NSString *)sdkHash;
 - (NSString*)getPlaytimeSdkHash;
 
-//customize the navigation bar
+//customize the navigation bar. A color is a hex string, #RGB, #ARGB, #RRGGBB or #AARRGGBB, the # optional; one that
+//isn't is ignored, and the color stays as it was.
 - (void)setNavigationBarColor: (NSString *)navigationBarColor;
 - (void)setNavigationBarText: (NSString *)navigationBarText;
 - (void)setNavigationBarTextColor: (NSString *)navigationBarTextColor;
+// The loading bar's color. The bar runs on a strip of the navigation bar's color, so any color that reads on the
+// navigation bar works on every page. The default is the wall's pink, #FC178D.
+- (void)setLoadingBarColor: (NSString *)loadingBarColor;
 
 + (UIColor*)colorWithHexString: (NSString*)hexString;
 
