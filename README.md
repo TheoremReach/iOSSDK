@@ -6,6 +6,10 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 ### v3.6.0
 - A Swift package: in Xcode, add `https://github.com/TheoremReach/iOSSDK` and its TheoremReachSDK product
 - Ads open in the browser, not in the reward center
+- Links to other apps (the App Store's itms-apps:, mailto:, tel: and an app's own scheme) on the reward center's
+  pages open in the app that takes them, and an App Store page (apps.apple.com), where an offer's link often ends,
+  opens the App Store. Links to your app's own schemes don't
+- The xcframework includes its debug symbols (dSYMs), so crash reports name the SDK's code
 - A thin loading bar replaces the loading spinner. `setLoadingBarColor:` sets its color, #FC178D by default.
   `initWithApiKey:` resets the colors, this one included, so set them after it
 - `setMmpProvider:installId:` (Swift: `setMmpInstallId(provider:installId:)`) passes the install id a mobile
