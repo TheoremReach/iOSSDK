@@ -25,8 +25,10 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
   with or without the #
 - Playtime needs adjoe 4.3 to 4.5. With Playtime turned on and no adjoe 4.3 to 4.5, the Playtime card no longer
   waits: the wall hears that no games are available, and a launch gets the usual error
-- The reward center reloads if its web content process ends; a second time within ten seconds, X brings it back. A
-  cancelled page load no longer shows "Unexpected Error" or leaves the loading bar
+- The reward center reloads if its web content process ends; a second time within ten seconds, it stays blank with X
+  showing. A cancelled page load no longer shows "Unexpected Error" or leaves the loading bar
+- "Unexpected Error", for a page that can't load, offers Close beside Try Again, so a respondent who's offline can
+  get back to your app
 - Edge swipes go back and forward in the reward center
 - The close and refresh buttons are built in, with VoiceOver names, instead of downloaded before each open
 - `rewardCenterViewController` is nil once the reward center closes
