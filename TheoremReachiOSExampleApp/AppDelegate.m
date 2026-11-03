@@ -35,7 +35,7 @@
 }
 
 - (void)initializeTheoremReachSDK {
-    [TheoremReach initWithApiKey:@"9148c4176f36f5302eb0a56695eb" userId:@"23344342252"];
+    [TheoremReach initWithApiKey:@"30a936dc7328c6e2bef47c0b1e13" userId:@"23344342252"];
     
     TheoremReach  *tr = [TheoremReach getInstance];
     [tr setRewardListenerDelegate:self];
