@@ -105,4 +105,8 @@ Add the following to your `podfile`
 
 [TheoremReach Unity SDK Integration](https://theoremreach.com/docs/unity)
 
-[TheoremReach Javascript Web SDK Integration](https://theoremreach.com/docs/web)  
+[TheoremReach Javascript Web SDK Integration](https://theoremreach.com/docs/web)
+
+## License
+
+The TheoremReach SDK is licensed under the [TheoremReach Publisher Terms and Conditions](https://info.theoremreach.com/terms-of-service/); see [LICENSE](LICENSE). The example app's code is under the MIT License ([its LICENSE](TheoremReachiOSExampleApp/LICENSE)). `PlaytimeMonetize.xcframework` is adjoe's, under adjoe's terms.
