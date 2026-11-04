@@ -29,6 +29,8 @@ DerivedData/
 *.ipa
 *.dSYM.zip
 *.dSYM
+# The SDK's debug symbols ship inside its xcframework, which names them.
+!/TheoremReachSDK.xcframework/*/dSYMs/*.dSYM
 
 # Build products
 build/
