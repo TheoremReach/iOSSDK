@@ -4,9 +4,10 @@ For additional information, please see the [TheoremReach iOS SDK Integration](ht
 
 ## Changelog
 ### v3.6.2
-- The status bar over the reward center follows its title bar's color: dark over a light color and light over a dark
-  one, whichever contrasts more. `rewardCenterStatusBarStyle` gives that style to an app that turns view controller
-  based status bar appearance off, to set while the reward center is open
+- The status bar over the reward center follows its title: dark content when the title is darker than the title bar,
+  and light when it's lighter. With a title all but invisible on the bar (an app that hides the toolbar can leave it
+  white on a light one), it follows the bar, whichever contrasts more. `rewardCenterStatusBarStyle` gives that style
+  to an app that turns view controller based status bar appearance off, to set while the reward center is open
 - The framework carries no purpose strings (NS...UsageDescription). It had four, which iOS never reads from a
   framework, and App Review's automated check stops an app over a vague one in any framework it embeds
 
