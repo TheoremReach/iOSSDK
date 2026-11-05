@@ -3,6 +3,14 @@
 For additional information, please see the [TheoremReach iOS SDK Integration](https://theoremreach.com/docs/ios).
 
 ## Changelog
+### v3.6.2
+- The status bar over the reward center follows its title: dark content when the title is darker than the title bar,
+  and light when it's lighter. With a title all but invisible on the bar (an app that hides the toolbar can leave it
+  white on a light one), it follows the bar, whichever contrasts more. `rewardCenterStatusBarStyle` gives that style
+  to an app that turns view controller based status bar appearance off, to set while the reward center is open
+- The framework carries no purpose strings (NS...UsageDescription). It had four, which iOS never reads from a
+  framework, and App Review's automated check stops an app over a vague one in any framework it embeds
+
 ### v3.6.0
 - A Swift package: in Xcode, add `https://github.com/TheoremReach/iOSSDK` and its TheoremReachSDK product
 - Ads open in the browser, not in the reward center
@@ -92,7 +100,7 @@ In Xcode, choose File > Add Package Dependencies, enter `https://github.com/Theo
 Add the following to your `podfile`
 
   ```groovy
-  pod 'TheoremReach', '3.6.0'
+  pod 'TheoremReach', '3.6.2'
   ```
 
   #### Manual:
